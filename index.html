@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Such a basic tutorial...</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+	<nav id="navbar-example2" class="navbar navbar-dark bg-dark" style="background-color: #000000;">
+  		<a class="navbar-brand " href="#">Baby steps with Bootstrap</a>
+  	<ul class="nav nav-pills">
+    	<li class="nav-item">
+      		<a class="nav-link" href="#intro">¿Que es Bootstrap?</a>
+    	</li>
+    	<li class="nav-item">
+      		<a class="nav-link" href="#descargando">Descargando Bootstrap</a>
+    	</li>
+    	<li class="nav-item">
+      		<a class="nav-link" href="#instalando">Instalando Bootstrap</a>
+    	</li>
+    	<li class="nav-item">
+      		<a class="nav-link" href="#aplicando">Aplicando Bootstrap</a>
+    	</li>
+    	<li class="nav-item">
+    		<a class="nav-link" href="#propuesta">Propuesta Bootstrap</a>
+    	</li>
+  	</ul>  
+	</nav>
+	<header>
+		<h1>Como aplicar Bootstrap a nuestra pagina web</h1>
+	</header>
+	
+	<div class="container">
+		<section>
+			<article>
+				<div>		
+					<h2 id="intro">¿Que es Bootstrap?</h2>
+					<p>Bootstrap es un Framework con el cual buscaremos organizar el contenido de nuestra pagina web de una manera mucho mas atractiva. Una pagina web mucho mejor tanto visual como estructuralmente.</p>
+				</div>
+				<div>
+					<h3>¿Que mas usaremos?</h3>
+					<p>JQuery, el cual hace mas facil el uso de JavaScript en nuestra pagina web pero que ademas es usado por unos componentes de JavaScript de Bootstrap</p>
+				<p>Empecemos...</p>
+				</div>
+			</article>
+
+			<article>
+				<div>
+					<h3 id="descargando">Descargando Bootstrap</h3>
+					<p>Para empezar, necesitaremos descargar Bootstrap desde su <a href="https://getbootstrap.com/"> pagina oficial.</a></p>
+				</div>
+				<div class="row">
+					<div class="col-md-6"><img src="imagenes/paginaBootstrap.png" alt="Pagina de descarga"></div>
+					<div class="col-md-6"><img src="imagenes/botonDescarga.png" alt="boton de descarga"></div>
+				</div>
+				
+			</article>
+
+			<article>
+				<div>
+					<h3>Descargando JQuery</h3>
+					<p>Ya teniendo Bootstrap, podemos descargar tambien JQuery desde su <a href="http://jquery.com/download/"> pagina oficial.</a></p>
+
+					<img src="imagenes/jQuery.png" alt="descarga jquery">
+				</div>			
+			</article>
+		</section>
+		<section>
+			<h2 id="instalando">Agregando Bootstrap a nuestra pagina web</h2>
+			<div class="row">
+				<article>
+					<div>
+						<p>Empezaremos descomprimiendo el contenido del .zip de Bootstrap en la carpeta de nuestra pagina web.</p>
+						<img src="imagenes/carpetaPaginaWeb.png" alt="contenido carpeta">
+						<p>El resultante sera tener una carpeta CSS y JS que son los componentes de Bootstrap.</p>
+					</div>
+					<div>
+						<p>Ahora guardararemos como un archivo JavaScrip el resultate de haber descargado JQuery. Este archivo al abrirlo contiene un codigo extenso y largo.</p> 
+						<img src="imagenes/cdnJQuery.png" alt="cdn de jQuery">
+					</div>
+					<div>
+						<p>Copiaremos este codigo en nuestro editor de texto y guardaremos este archivo como "jquery.js" en la carpeta "js" de nuestra pagina web.</p>
+						<img src="imagenes/guardandoJqueryJS.png" alt="guardando archivo" >
+					</div>
+					<div>
+						<p>Ahora, en nuestro codigo HTML, en el bloque "head" ingresaremos: </p>
+						<img src="imagenes/añadiendoBootstrap.png" alt="link bootstrap" >
+						<p>Ademas añadiremos el "script" de JQuery y Bootstrap respectivamente. Estos antes de finalizar el bloque "body"</p>
+						<img src="imagenes/scriptBootstrapJQuery.png" alt="script jquery y bootstrap">
+					</div>
+				
+				</article>
+			</div>
+		</section>
+		<section>
+			<div class="row">
+				<article>
+					<div>
+						<h3>Otro modo de instalar Bootstrap</h3>
+						<p>Desde el cdn de Bootstrap en la <a href="https://getbootstrap.com/docs/4.1/getting-started/download/"> pagina oficial.</a> </p>
+						<img src="imagenes/OtraFormaDeCargarBootstrap2.png" alt="otra forma 1">
+						<p>Copiamos y pegamos las lineas de Script y Link de los componentes CSS y JavaScript en las ubicaciones ya mencionadas anteriormente.</p>
+						<img src="imagenes/otroModoCargarBootstrap1.png" alt="otra forma 2">
+						<p> Y listo... tenemos Bootstrap instalado en nuestra pagina web.</p>
+						</div>
+				</article>
+			</div>
+		</section>
+		<section>
+			<div class="row">
+				<article>
+					<div>
+					<h2 id="aplicando">Aplicando Bootstrap</h2>	
+					<p>Dado que bootstrap cuenta con una gran cantidad de componentes, que pueden ser vistos en su <a href="https://getbootstrap.com/docs/4.1/components/alerts/">documentacion en linea</a>, aqui solo expondremos la manera como puede ser distribuida la estructura en Bootstrap.</p>
+					<p>Lo mas importante que debemos conocer es la grid de bootstrap dado que apartir de esta toma forma la estructura de nuestra pagina web. Esta grid cuenta con doce columnas, a nuestro gusto, separaremos en las unidades que necesitemos y siempre teniendo en cuenta que la suma de esas separaciones debe ser igual a doce y ademas en cualquier estructura "contenedor" podremos añadir filas y columnas (div's, section's, article's, aside's, etc). Tomado de la pagina de Bootstrap, mostramos la tabla de equivalencias y valores que podemos poner a las columnas:
+					</p>
+					<img src="imagenes/gridLimits.png" alt="equivalencias columnas">
+					<p>Primero en el codigo de HTML haremos como practica una estructura base para nuestra pagina web. Primero haremos un archivo CSS de estilos para darle un poco de color a la pagina web, nosotros te planteamos el nuestro:</p>
+					<img src="imagenes/Estilos.png" alt="estilos">
+					<p>Ahora en nuestro codigo html miremos como queda nuestra pagina con una estructura basica.</p>
+					<img src="imagenes/estiloSinBootstrap.png" alt="sin bootstrap">
+					<img src="imagenes/yEnLaPagina.png" alt="en la pagina">
+					<p>Todo el texto queda arrumado hacia la izquierda, inclusive el "Aside". Pero, como tenemos estructuras contenedoras podemos asignar una clase de fila, columna o container a estas:</p>
+					<img src="imagenes/conContainer.png" alt="con container">
+					<img src="imagenes/containerEnLaPagina.png" alt="container en la pagina">
+					<p>Con el "container" todo quedo centrado... pero igual no es que se vea bonito y ese "Aside" sigue abajo. Hagamos uso entonces de las columnas en las filas de Bootstrap para separar informacion.</p>
+					<p>En nuestro caso pondremos la fila en el "section" que tenemos creado, añadiendole: <code class="highlighter-rouge">section class="main row"</code> 
+					(El main es para llamar el color que tenemos en nuestro archivo estilos.css) y separaremos la imagen y texto, para esto añadiremos una columna de ocho espacios en el "article", donde pondremos la imagen, con: <code class="highlighter-rouge"> article class="col-md-8"</code>. En teoria nos quedarian cuatro columnas para poner un texto... pondremos esas cuatro restantes en el "aside": <code class="highlighter-rouge">aside class="cold-md-4"</code>.</p>
+					<img src="imagenes/codigoDeCol.png" alt="codigo y col">
+					<img src="imagenes/paginaConCol.png" alt="codigo y pag">
+					</div>		
+				</article>
+				<article>
+					<div>
+						<p>Otro componente que tiene Bootstrap es el de la barra de navegacion, la cual resulta util para acceder por medio de hipervinculos a otras secciones de nuestra pagina web. Su adicion ademas resulta facil y la estructura propuesta por el equipo de Bootstrap es esta:</p>
+
+						<div class="row card">
+						<pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-expand-lg navbar-light bg-light"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Navbar<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"navbar-toggler"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#navbarNav"</span> <span class="na">aria-controls=</span><span class="s">"navbarNav"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-label=</span><span class="s">"Toggle navigation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggler-icon"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse navbar-collapse"</span> <span class="na">id=</span><span class="s">"navbarNav"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-nav"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#referenciaElemento1"</span><span class="nt">&gt;</span>Elemento1 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>(current)<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#referenciaElemento2"</span><span class="nt">&gt;</span>Elemento2<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#referenciaElemento3"</span><span class="nt">&gt;</span>Elemento3<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link disabled"</span> <span class="na">href=</span><span class="s">"#referenciaElemento4"</span><span class="nt">&gt;</span>Elemento 4<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre>
+					</div>
+					</div>
+					<div>
+						<p>En la documentacion de Bootstrap se hace mas enfasis en otros modos de mostrar la Navbar sin uso de listas sino con clases, nuevamente se invita al lector mira la <a href="https://getbootstrap.com/docs/4.1/components/alerts/">documentacion oficial.</a></p>
+						<p>En el ejemplo que seguiamos se aplico este modelo de Navbar con la opcion de que cuando se clickease alguno de los elementos, este nos llevara a un de los "aside". Se hace enfasis en algunas funcionalidades de bootstrap como lo es el <code class="highlighter-rouge">button class="navbar-toggler"</code> que permite ocupar horizontalmente toda la pagina para editar el tamaño de los botones conforme se añaden mas. El detalle en la etiqueta "span" simplemente para hacer referencia a que se pueden añadir iconos y demas detalles a cada boton posteriormente. Por ultimo se muestra en <code class="highlighter-rouge">ul class="navbar-nav"</code> que los botones son elementos de esa lista.</p>
+						<img src="imagenes/estructuraNavbar.png" alt="estructura navbar">
+						<img src="imagenes/navbarEnPagina.png" alt="navbar pagina">
+						<p>Si queremos hacer referencia a algun elemento de nuestra pagina web en algun boton de la navbar agregamos la opcion <code class="highlighter-rouge">id="nombreReferencia"</code> a ese elemento y lo asociamos en la navbar.</p>
+						<img src="imagenes/idEnParrafo.png" alt="id en parrafo">
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section>
+			<div class="row">
+				<h2 id="propuesta">Ejercicio propuesto</h2>
+				<p>Con lo aprendido en este abrebocas y breve tutorial de Bootstrap se propone al lector realizar una pagina web aplicando algunos componentes de Bootstrap como el grid, navbar, algun otro de la documentacion o que conozca. Puede realizar la pagina desde cero o aplicar Bootstrap a esta <a href="https://drive.google.com/open?id=1pGUSPKnnC9PyOprunB1wKT5PT05LIA26">pagina propuesta</a>.</p>
+			</div>
+		</section>
+
+
+	</div>	
+	<div class="card border-dark mb-3 bg-dark" >
+  		<div class="card-header text-light">Investigacion</div>
+			<div class="card-body text-primary">
+    			<h5 class="card-title">Grupo conformado por: </h5>
+		    	<p class="card-text">
+			    	<p>Cristian Mendoza</p>
+					<p>Daniel Blandón</p>
+					<p>Mateo Baena</p>
+					<p>Jhonatan Usuga</p>
+		    	</p>
+  		</div>
+	</div>
+	<script src="js/jquery.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>
